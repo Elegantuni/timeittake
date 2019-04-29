@@ -18,7 +18,7 @@ if len(sys.argv) == 3:
         months = 0
         years = years + 1
 
-    print("The total amount of years and months to produce $", total1, "saving $", number1, "is", years, "years and", months, "months")
+    print("The total amount of years and months to produce $", total1, "saving $", number1, "per month is", years, "years and", months, "months")
 else:
     print(sys.argv[0], "<total price> <money saved per month>")
 

@@ -8,21 +8,17 @@ if len(sys.argv) == 4:
 
 	total1 = float(sys.argv[1])
 
+	moneyoff = float(sys.argv[3])
+
 	timetakes = total1 / number1
 
 	years = int(timetakes / 12)
 
-	months = int(math.ceil(timetakes % 12))
+	total2 = total1 / number1 + (years+1) * moneyoff
 
-	if months == 12:
-		months = 0
-		years = years + 1
+	months = int(math.ceil(total2 % 12))
 
-	months = months + int(sys.argv[3]) * years
-
-	years = years + int(months / 12)
-
-	months = int(months % 12)
+	years = int(total2 / 12)
 
 	print("The total amount of years and months to produce $", total1, "saving $", number1, "per month and not saving $", number1, "for", int(sys.argv[3]), "times per year is", years, "years and", months, "months")
 else:
